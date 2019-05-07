@@ -76,6 +76,6 @@ index.js 是生成api的具体配置
 
 author：chenjianping
 
-date：2019-05-07 16:32:48
+create date：2019-05-07 16:32:48
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
