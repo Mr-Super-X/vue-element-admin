@@ -12,7 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "build-scp2-test": "node build/build-scp2-test.js",
     "build": "node build/build.js pro",
-    "build-gray": "node build/build.js pre",
+    "build-pre": "node build/build.js pre",
     "build-test": "node build/build.js test"
   },
   "dependencies": {
