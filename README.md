@@ -29,7 +29,7 @@ npm test
 
 ### 说明
 系统目录结构搭建百度脑图说明
-地址：http://naotu.baidu.com/file/f7776eece4de3d42fad50cdf644ff8d7
+地址：http://naotu.baidu.com/file/f7776eece4de3d42fad50cdf644ff8d7?token=dbfb42501e4a1d9d
 
 ### git分支说明
 - initial-template        ------ 对应1.0版本空白项目初始模板代码
