@@ -10,7 +10,9 @@ import dynamic_list from './dynamic_list'
 
 Vue.use(Router)
 
-export default new Router({
+import store from '@/store/index'
+
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -81,7 +83,53 @@ export default new Router({
         }
       }]
     },
+    {
+      path: '/',
+      name: 'Help',
+      component: layout,
+      hidden: true,
+      meta: {
+        keepAlive: false,
+        title: '帮助'
+      },
+      children: [{
+        path: '/help',
+        name: 'help',
+        leaf: false,
+        component: () => import('@/views/help/help'),
+        meta: {
+          keepAlive: false,
+          title: "使用帮助"
+        }
+      }]
+    },
     //开发新功能，开启本地路由表，并注释掉vuex中对路由表的处理代码
     ...dynamic_list
   ]
 })
+
+
+//路由导航拦截，全局钩子，可以在这里做校验（登陆和权限）
+router.beforeEach((to, from, next) => {
+  // 不需要登录权限的路由数组
+  const nextRoute = ['login', 'error_404', 'error_500', 'welcome', 'help'];
+  // 获取vuex中保存的token信息
+  const token = store.getters.token;
+
+  if (nextRoute.indexOf(to.name) !== -1) {
+    // 不需要登录权限的页面直接跳转
+    next();
+  } else {
+    // 需要校验的路由，在这里进行处理
+    // 查看登录权限
+    if (!token) {
+      next({name: 'login'});
+    }else {
+      next();
+    }
+  }
+
+
+})
+
+export default router

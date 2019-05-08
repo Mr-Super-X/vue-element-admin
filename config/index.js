@@ -20,8 +20,12 @@ switch (process.argv[2]) {
     env = require("./pre.env.js");
     break;
 }
-console.log('开始打包' + env.title + '环境...');
-console.log('配置参数如何...');
+if(process.argv[2] === '--inline') {
+  console.log('开始运行本地开发环境...');
+}else {
+  console.log('开始打包' + env.title + '环境...');
+}
+console.log('当前配置参数如下...');
 process.argv[2] === '--inline' ? console.log(require("./dev.env.js")) : console.log(env);
 
 module.exports = {
