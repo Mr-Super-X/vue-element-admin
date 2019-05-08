@@ -67,6 +67,15 @@ api分模块管理，模块统一放至api/modules中
 
 index.js 是生成api的具体配置
 
+### router
+统一放在router目录管理
+
+路由分模块管理，模块统一放至router/modules中
+
+需要动态生成路由权限表的模块统一配置进dynamic_list.js中，配置示例在代码中
+
+index.js 是路由入口文件，代码中有使用注释
+
 ### 项目目录(views/nav)
 - systemSetting 系统设置
 - ...
