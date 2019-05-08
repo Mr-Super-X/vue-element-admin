@@ -54,8 +54,8 @@ npm test
 ### utils提供全局的工具方法
 需要的工具方法在utils中配置
 
-### filter提供全局过滤器
-需要配置的过滤器在filter中配置, 引用已在main.js里面配置
+### filters提供全局过滤器
+需要配置的公共过滤器在filters/index.js中配置, 引用已在main.js里面配置
 
 ### store vuex的配置
 需要配置的状态管理模块统一在store/modules中配置最后在index入口文件中引用
@@ -75,6 +75,21 @@ index.js 是生成api的具体配置
 需要动态生成路由权限表的模块统一配置进dynamic_list.js中，配置示例在代码中
 
 index.js 是路由入口文件，代码中有使用注释
+
+- 后端配置路由模块按如下数据格式，必要参数如下：
+``` bash
+{
+  action: "goods",
+  name: "商品",
+  child: [
+    {
+      action: "goodsManage",
+      name: "商品管理",
+      child: []
+    }
+  ],
+}
+```
 
 ### 项目目录(views/nav)
 - systemSetting 系统设置
