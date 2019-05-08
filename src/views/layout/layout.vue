@@ -12,7 +12,8 @@
 
 <script>
   export default {
-    name: "layout"
+    name: "layout",
+    inject: ['reload'], // 注入App.vue中reload方法
   }
 </script>
 
