@@ -3,22 +3,33 @@
 export default {
   //方法定义在此处，例如：
 
-  // 处理价格 2位小数
-  handlePricePlus(value) {
-    let sNum = value.toString(); //先转换成字符串类型
-    if (sNum.indexOf('.') == 0) { //第一位就是 .
-      console.log('first str is .')
-      sNum = '0' + sNum
+  // 利用js对象特性数组去重 ——借鉴了雅虎YUI框架的底层代码
+  unique(arr) {
+    function toObj(arr) {
+      let obj = {};
+      let key;
+
+      for (let i = 0; i < arr.length; i++) {
+        key = typeof (arr[i]) + '_' + arr[i];
+        obj[key] = arr[i];
+      }
+
+      return obj;
     }
-    sNum = sNum.replace(/[^\d.]/g, ""); //清除“数字”和“.”以外的字符
-    sNum = sNum.replace(/\.{2,}/g, "."); //只保留第一个. 清除多余的
-    sNum = sNum.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
-    sNum = sNum.replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3'); //只能输入两个小数
-    //以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额
-    if (sNum.indexOf(".") < 0 && sNum != "") {
-      sNum = parseFloat(sNum);
+
+    function toArr(obj) {
+      let arr = [];
+
+      for (let attr in obj) {
+        if (obj.hasOwnProperty(attr)) {
+          arr.push(obj[attr]);
+        }
+      }
+
+      return arr;
     }
-    return sNum
+
+    return toArr(toObj(arr));
   },
 
   // 验证身份证
