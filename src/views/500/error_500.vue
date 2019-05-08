@@ -1,10 +1,13 @@
 <template>
   <!--服务端错误处理页-->
+  <div class="error_500">
+    500
+  </div>
 </template>
 
 <script>
   export default {
-    name: "500_error"
+    name: "error_500"
   }
 </script>
 

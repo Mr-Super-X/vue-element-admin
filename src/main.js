@@ -15,7 +15,7 @@ import utils from './utils'
 Vue.prototype.$utils = utils
 
 // 公共过滤器引用
-import * as filters from './fillters/index'
+import * as filters from './filters/index'
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })

@@ -1,5 +1,8 @@
 <template>
   <!--管理系统使用帮助页-->
+  <div class="help">
+    help
+  </div>
 </template>
 
 <script>
