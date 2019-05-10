@@ -12,16 +12,12 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 html {
   height: 100%;
   background: #fff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-}
-body {
-  min-height: 100vh;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -100,13 +96,19 @@ select::-ms-expand {
   display: none;
 }
 
-input::-ms-clear { display: none;}
-input::-ms-reveal { display: none;}
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-input[type="number"]{
+
+input[type="number"] {
   -moz-appearance: textfield;
 }
