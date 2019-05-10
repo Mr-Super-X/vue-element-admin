@@ -101,8 +101,8 @@ mixin分模块管理，模块统一放至mixins/modules中
 
 在index.js中引入模块，在需使用mixin的组件中按需import {module_name, xxx} from '@/mixins'
 
-### 项目目录(views/nav)
-- systemSetting 系统设置
+### 视图页面目录(views/nav)
+- systemSetting 系统设置（举例）
 - ...
 
 ### layout组件
