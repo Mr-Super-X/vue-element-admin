@@ -35,6 +35,9 @@ npm test
 - initial-template        ------ 对应1.0版本空白项目初始模板代码
 - master     ------ 对应最新版本代码
 
+
+- 后面会在master分支搭建一个后台管理系统的页面布局模板以提供直接修改使用，想要自己搭建页面布局可以下载initial-template分支空白模板
+
 ### 打包说明
 配置是在package.json里面
 ```shell
