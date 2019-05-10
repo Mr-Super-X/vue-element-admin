@@ -7,7 +7,7 @@
 <script>
   export default {
     name: 'App',
-    provide() {
+    provide() { //向下注入刷新视图方法
       return {
         reload: this.reload
       };

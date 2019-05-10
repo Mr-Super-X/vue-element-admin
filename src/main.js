@@ -1,10 +1,16 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import 'normalize.css' // 重置默认样式
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store' // vuex
+
+// 重置默认样式
+import './assets/css/reset.less'
+import 'normalize.css'
+
+// ES6代码转为ES5代码
+import 'babel-polyfill'
 
 // 引入api模块配置，组件中可通过（this.$api.module_name.api_name()）调用
 import api from './api'
