@@ -14,7 +14,7 @@ export default [
     children: [{
       path: 'systemSetting/systemSetting',
       leaf: false,
-      component: () => import('@/views/nav/systemSetting/systemSetting'),
+      component: () => import('@/views/nav/systemSetting/systemSetting'), //按需引入组件，提高首屏加载速度
       name: 'systemSetting',
       meta: {
         keepAlive: true, //是否缓存页面
