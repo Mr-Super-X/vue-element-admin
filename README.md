@@ -54,7 +54,7 @@ npm test
 打包
 已在package.json里面配置本地，测试，预发布，正式等环境
 
-### 命名规范
+### 命名规范 https://juejin.im/post/5c92ff94f265da6128275a85#heading-9
 ### Component
 所有的Component文件都是以大写开头 (PascalCase)，这也是官方所 推荐的。
 
