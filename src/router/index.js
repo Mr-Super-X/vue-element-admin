@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '@/store/index' // 引入vuex
 
 // 静态模块
 import Login from '@/views/login/login'
@@ -9,8 +10,6 @@ import layout from '@/views/layout/layout'
 import dynamic_list from './dynamic_list'
 
 Vue.use(Router)
-
-import store from '@/store/index'
 
 const router = new Router({
   routes: [
