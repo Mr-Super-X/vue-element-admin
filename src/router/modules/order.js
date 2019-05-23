@@ -1,6 +1,9 @@
 //例子：
 import layout from '@/views/layout/layout'
 
+// 生产环境路由懒加载
+const _import = require('../_import_' + process.env.NODE_ENV)
+
 export default [
   {
     path: '/',
@@ -14,7 +17,7 @@ export default [
     children: [{
       path: 'systemSetting/systemSetting',
       leaf: false,
-      component: () => import('@/views/nav/systemSetting/systemSetting'), //按需引入组件，提高首屏加载速度
+      component: _import('nav/systemSetting/systemSetting'), //按需引入组件，提高首屏加载速度
       name: 'systemSetting',
       meta: {
         keepAlive: true, //是否缓存页面

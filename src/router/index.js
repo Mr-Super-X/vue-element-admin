@@ -5,6 +5,9 @@ import store from '@/store/index' // 引入vuex
 // 基础布局组件
 import layout from '@/views/layout/layout'
 
+// 生产环境路由懒加载
+const _import = require('./_import_' + process.env.NODE_ENV)
+
 // 动态路由模块，此处只提供开发环境使用，生产环境需要注释掉路由的权限表
 import dynamic_list from './dynamic_list'
 
@@ -21,19 +24,19 @@ const router = new Router({
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/login/login')
+      component: _import('login/login')
     },
     {
       path: '/401',
       name: 'Page401',
       hidden: true,
-      component: () => import('@/views/error-page/401')
+      component: _import('error-page/401')
     },
     {
       path: '/404',
       name: 'Page404',
       hidden: true,
-      component: () => import('@/views/error-page/404')
+      component: _import('error-page/404')
     },
     {
       path: '/',
@@ -48,7 +51,7 @@ const router = new Router({
         path: '/welcome',
         name: 'welcome',
         leaf: false,
-        component: () => import('@/views/welcome/welcome'),
+        component: _import('welcome/welcome'),
         meta: {
           keepAlive: false,
           title: "欢迎登录"
@@ -68,7 +71,7 @@ const router = new Router({
         path: '/help',
         name: 'help',
         leaf: false,
-        component: () => import('@/views/help/help'),
+        component: _import('help/help'),
         meta: {
           keepAlive: false,
           title: "使用帮助"
