@@ -17,6 +17,9 @@ module.exports = {
     video: ['src', 'poster'],
     source: 'src',
     img: 'src',
-    image: 'xlink:href'
+    image: 'xlink:href',
+    vue: {
+      preserveWhitespace: false, //阻止元素间生成空白内容，减少文件体积
+    }
   }
 }
