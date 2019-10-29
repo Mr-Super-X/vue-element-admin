@@ -85,10 +85,11 @@ const router = new Router({
 })
 
 
+// 不需要登录权限的路由数组
+const nextRoute = ['login', 'Page401', 'Page404'];
 //路由导航拦截，全局钩子，可以在这里做校验（登陆和权限）
 router.beforeEach((to, from, next) => {
-  // 不需要登录权限的路由数组
-  const nextRoute = ['login', 'Page401', 'Page404'];
+  
   // 获取vuex中保存的token信息
   const token = store.getters.token;
 
