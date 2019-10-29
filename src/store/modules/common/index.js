@@ -3,7 +3,7 @@
 import cacheState from '@/store/cacheState'
 import router from '@/router/index'
 import router_filter from '@/utils/routerFilter'
-import dynamic_list from '@/router/dynamic_list'
+import dynamic_list from '@/router/dynamic_router_list'
 
 // state
 const state = cacheState.get() || {

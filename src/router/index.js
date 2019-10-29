@@ -9,7 +9,7 @@ import layout from '@/views/layout/layout'
 const _import = require('./_import_' + process.env.NODE_ENV)
 
 // 动态路由模块，此处只提供开发环境使用，生产环境需要注释掉路由的权限表
-import dynamic_list from './dynamic_list'
+import dynamic_list from './dynamic_router_list'
 
 Vue.use(Router)
 
