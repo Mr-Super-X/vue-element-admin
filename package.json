@@ -16,7 +16,7 @@
     "build-test": "node build/build.js test"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.8.2",
     "normalize.css": "^8.0.1",
